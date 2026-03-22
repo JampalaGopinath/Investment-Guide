@@ -3,6 +3,8 @@
 > A practical, book-style guide to building and protecting wealth for minor grandchildren  
 > using safe, government-backed Indian investment schemes.
 
+<a href="pdf/investment-guide.pdf" class="md-button md-button--primary" download="Investment-Guide.pdf">📄 Download PDF</a>
+
 ---
 
 ## Purpose

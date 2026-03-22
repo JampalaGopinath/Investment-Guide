@@ -38,6 +38,18 @@ theme:
 extra_css:
   - assets/stylesheets/extra.css
 
+plugins:
+  - search
+  - with-pdf:
+      author: Gopinath Jampala
+      copyright: "Educational only. Consult your financial advisor. Last updated: March 2026."
+      cover: true
+      cover_title: "Investment Guide"
+      cover_subtitle: "Grandparents → Grandchildren"
+      cover_logo: assets/images/cover-logo.svg
+      output_path: pdf/investment-guide.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+
 markdown_extensions:
   - admonition
   - pymdownx.details

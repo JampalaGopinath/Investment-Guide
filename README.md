@@ -3,7 +3,8 @@
 > A practical, book-style guide to building and protecting wealth for minor grandchildren  
 > using safe, government-backed Indian investment schemes (SBI FD · NSC · Post Office TD · SCSS).
 
-**Live site:** https://JampalaGopinath.github.io/Investment-Guide/
+**Live site:** https://JampalaGopinath.github.io/Investment-Guide/  
+**Download PDF:** https://JampalaGopinath.github.io/Investment-Guide/pdf/investment-guide.pdf
 
 ---
 
@@ -44,6 +45,16 @@ mkdocs build
 ```
 
 The output will be in the `site/` directory.
+
+### Build with PDF export
+
+```bash
+ENABLE_PDF_EXPORT=1 mkdocs build
+```
+
+The PDF is generated at `site/pdf/investment-guide.pdf`. It includes a cover page, auto-generated table of contents, and all 17 chapters in a single file.
+
+> **Note:** PDF generation requires WeasyPrint system fonts. On Ubuntu/Debian: `sudo apt-get install fonts-dejavu`. On macOS: fonts are included by default.
 
 ---
 
