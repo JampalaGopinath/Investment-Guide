@@ -1,0 +1,124 @@
+/* ============================================================
+   Investment Guide — extra.css
+   Book-style side headings using MkDocs Material admonitions
+   ============================================================ */
+
+/* ── Body / Typography ─────────────────────────────────────── */
+.md-typeset {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ── Side heading admonition ───────────────────────────────── */
+/*
+   Usage in Markdown:
+       !!! note "Side heading: Your heading text"
+           Your side-note body text here.
+
+   On wide viewports this renders in the normal flow but is
+   visually styled as a margin/side note (indented, lighter
+   background, left border accent).  On mobile it collapses to
+   full width cleanly.
+*/
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-left: 4px solid var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Title bar of the note admonition */
+.md-typeset .admonition.note > .admonition-title,
+.md-typeset details.note > summary {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--md-primary-fg-color);
+  background: transparent;
+  padding-left: 0;
+}
+
+/* Hide the default admonition icon */
+.md-typeset .admonition.note > .admonition-title::before,
+.md-typeset details.note > summary::before {
+  display: none;
+}
+
+/* ── Wide-viewport side-note float ─────────────────────────── */
+/*
+   On screens wider than 1080px, float the note to the right
+   as a true margin note, allowing body text to wrap beside it.
+   On smaller screens it stays in the normal flow (full width).
+*/
+@media screen and (min-width: 1080px) {
+  .md-typeset .admonition.note,
+  .md-typeset details.note {
+    float: right;
+    clear: right;
+    width: 28%;
+    margin: 0 -2% 1rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Clear floats after sections */
+.md-typeset h2,
+.md-typeset h3 {
+  clear: both;
+}
+
+/* ── Chapter navigation links ───────────────────────────────── */
+/* Style the "← Chapter N" / "Chapter N+1 →" footer links */
+.md-typeset p:last-of-type em a,
+.md-typeset p em a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.md-typeset p:last-of-type em a:hover,
+.md-typeset p em a:hover {
+  text-decoration: underline;
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+.md-typeset table:not([class]) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background: var(--md-code-bg-color);
+}
+
+/* ── Checklist styling ──────────────────────────────────────── */
+.md-typeset ul li input[type="checkbox"] {
+  margin-right: 0.4em;
+  accent-color: var(--md-primary-fg-color);
+}
+
+/* ── Warning admonition ─────────────────────────────────────── */
+.md-typeset .admonition.warning > .admonition-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}

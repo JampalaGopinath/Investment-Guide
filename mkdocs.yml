@@ -1,0 +1,87 @@
+site_name: Investment Guide
+site_description: A practical, book-style guide to building and protecting wealth for grandchildren using safe government-backed schemes.
+site_author: Gopinath Jampala
+site_url: https://JampalaGopinath.github.io/Investment-Guide/
+
+repo_name: JampalaGopinath/Investment-Guide
+repo_url: https://github.com/JampalaGopinath/Investment-Guide
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Merriweather
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.tooltips
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+  - with-pdf:
+      author: Gopinath Jampala
+      copyright: "Educational only. Consult your financial advisor. Last updated: March 2026."
+      cover: true
+      cover_title: "Investment Guide"
+      cover_subtitle: "Grandparents → Grandchildren"
+      cover_logo: assets/images/cover-logo.svg
+      output_path: pdf/investment-guide.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Chapters:
+    - "Chapter 1 — Goal & Scenario": chapters/01-goal-scenario.md
+    - "Chapter 2 — Options Overview": chapters/02-options-overview.md
+    - "Chapter 3 — SBI FD": chapters/03-sbi-fd.md
+    - "Chapter 4 — NSC": chapters/04-nsc.md
+    - "Chapter 5 — Post Office TD": chapters/05-po-td.md
+    - "Chapter 6 — Post Office TD Loophole": chapters/06-po-td-loophole.md
+    - "Chapter 7 — SCSS": chapters/07-scss.md
+    - "Chapter 8 — Interest Strategy": chapters/08-interest-strategy.md
+    - "Chapter 9 — Auto-Renew Strategy": chapters/09-auto-renew.md
+    - "Chapter 10 — Documents Checklist": chapters/10-documents.md
+    - "Chapter 11 — Nominee vs Guardian": chapters/11-nominee-guardian.md
+    - "Chapter 12 — Death Case Process": chapters/12-death-case.md
+    - "Chapter 13 — 5-Year vs 10-Year": chapters/13-five-vs-ten.md
+    - "Chapter 14 — Maturity Comparison": chapters/14-maturity-comparison.md
+    - "Chapter 15 — ₹2L Comparison": chapters/15-2l-comparison.md
+    - "Chapter 16 — Recommended Plan": chapters/16-recommended-plan.md
+    - "Chapter 17 — Master Summary": chapters/17-master-summary.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/JampalaGopinath/Investment-Guide
